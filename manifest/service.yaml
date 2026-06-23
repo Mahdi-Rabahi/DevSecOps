@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Service
+metadata:
+  name: devsecops-service
+  labels:
+    app: devsecops-web
+spec:
+  selector:
+    app: devsecops-web
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
