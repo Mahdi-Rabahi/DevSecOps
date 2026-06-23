@@ -1,0 +1,8 @@
+- name: play
+  hosts: all
+  become: true
+  tasks:
+      - name: deploy
+        copy:
+            src: myapp-g20.war
+            dest: /opt/tomcat/webapps
